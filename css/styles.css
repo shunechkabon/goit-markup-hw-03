@@ -32,8 +32,7 @@ img {
 
 .container {
     max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -174,8 +173,17 @@ img {
 /* Section 2. Our strengths */
 
 .visually-hidden {
-    position: fixed;
-    transform: scale(0);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .strengths-list {
@@ -302,6 +310,11 @@ img {
     padding: 100px 0;
 }
 
+.logo-web-footer {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
 .logo-studio-footer {
     color:  #F4F4FD;
     font-family: "Raleway", sans-serif;
@@ -310,8 +323,6 @@ img {
     line-height: 1.17;
     letter-spacing: 0.54px;
     text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 16px;
 }
 
 .page-footer-text {
