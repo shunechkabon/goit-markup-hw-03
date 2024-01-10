@@ -31,19 +31,24 @@ img {
 }
 
 .container {
-    max-width: 1440px;
-    padding-left: 156px;
-    padding-right: 156px;
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
 }
 
-.page-header .container {
+
+/* Header. Logo+navigation */
+
+.page-header {
+    border-bottom: 1px solid #E7E9FC;
+}
+
+.page-header-container {
     background:  #FFF;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom: 1px solid  #E7E9FC;
     padding-top: 24px;
     padding-bottom: 24px;
     justify-content: space-between;
@@ -52,7 +57,7 @@ img {
 .page-header-nav {
     display: flex;
     flex-direction: row;
-    gap: 76px;
+    align-items: center;
 }
 
 .logo-web {
@@ -63,6 +68,7 @@ img {
     line-height: 1.17;
     letter-spacing: 0.54px;
     text-transform: uppercase;
+    margin-right: 76px;
 }
 
 .logo-studio-header {
@@ -86,6 +92,7 @@ img {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.32px;
+    padding: 24px 0;
 }
 
 .page-header-nav-links-item:hover {
@@ -118,16 +125,13 @@ img {
 }
 
 
+/* Section 1. Heading+button */
 
-
-.main-page .container {
-    background-color:  #2E2F42;
-    padding-top: 188px;
-    padding-bottom: 188px;
+.main-page {
+    padding: 188px 0;
+    background-color: #2E2F42;
     margin: 0%;
     height: 600px;
-    flex-shrink: 0;
-    text-align: center;
 }
 
 .main-page-title {
@@ -136,9 +140,10 @@ img {
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 1.12px;
-    width: 496px;
+    max-width: 496px;
+    display: block;
+    margin: 0 auto 48px;
 }
-
 
 .main-page-btn {
     background:  #4D5AE5;
@@ -148,6 +153,13 @@ img {
     font-weight: 500;
     letter-spacing: 0.64px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .main-page-btn:hover {
@@ -158,17 +170,38 @@ img {
     background-color: #404BBF;
 }
 
-.strength-item-title {
+
+/* Section 2. Our strengths */
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+.strengths-list {
+    display: flex;
+    gap: 24px;
+}
+
+.strength-list-item {
+    width: calc((100% - 72px) / 4);
+}
+
+.strength-list-item-title {
     color:  #2E2F42;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
-.strength-item-text {
+.strength-list-item-text {
     letter-spacing: 0.02em;
 }
+
+
+/* Section 3. Our team */
 
 .team-page {
     background:  #F4F4FD;
@@ -182,10 +215,23 @@ img {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.team-page-list {
+    display: flex;
+    gap: 24px;
 }
 
 .team-page-list-item {
     background-color:  #FFF;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-page-list-item-container {
+    padding: 32px 0;
 }
 
 .team-page-list-item-title {
@@ -194,12 +240,18 @@ img {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-page-list-item-text {
     font-size: 16px;
     letter-spacing: 0.02em;
+    text-align: center;
 }
+
+
+/* Section 4. Our Portfolio */
 
 .portfolio-page-title {
     color: #2E2F42;
@@ -209,6 +261,24 @@ img {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.portfolio-page-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-page-list-item {
+    width: calc((100% - 48px) / 3);
+}
+
+.portfolio-page-list-item-container {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 .portfolio-page-list-item-title {
@@ -217,14 +287,19 @@ img {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .portfolio-page-list-item-text {
     letter-spacing: 0.02em;
 }
 
+
+/* Footer */
+
 .page-footer {
     background:  #2E2F42;
+    padding: 100px 0;
 }
 
 .logo-studio-footer {
@@ -235,11 +310,15 @@ img {
     line-height: 1.17;
     letter-spacing: 0.54px;
     text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .page-footer-text {
     color:  #F4F4FD;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 400;
     letter-spacing: 0.32px;
+    max-width: 264px;
 }
